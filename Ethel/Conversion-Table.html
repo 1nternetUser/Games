@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<title>Fahrenheit to Celcius Temperature Converter</title>
+<title>Ethel: Converstion Tables</title>
 <body>
 
-<h2>Temperature Converter</h2>
-<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+<h2>HP & DMG Conversion Table: </h2>
+<p>Health Formula is 100 + (50 * Level) = :</p>
 
 <p>
-  <label>Fahrenheit</label>
-  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+  <label>HP</label>
+  <input id="inputHP" type="number" placeholder="HP" oninput="HPConverter(this.value)" onchange="HPConverter(this.value)">
 </p>
-<p>Celcius: <span id="outputCelcius"></span></p>
+<p>HP Scaled: <span id="outputHP"></span></p>
 
 <script>
-function temperatureConverter(valNum) {
+function HPConverter(valNum) {
   valNum = parseFloat(valNum);
-  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+  document.getElementById("outputHP").innerHTML=(valNum * 50) + 100;
 }
 </script>
 
